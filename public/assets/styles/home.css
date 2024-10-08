@@ -1,0 +1,85 @@
+body {
+    margin-top: 20px;
+}
+
+.innerdetail {
+    position: relative;
+}
+
+.innerdetail h5 {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    font-size: 15px;
+    z-index: 10;
+    position: relative;
+}
+
+.innerdetail form input {
+    z-index: 10;
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #000;
+}
+
+.detail {
+    border-bottom: 0.5px solid;
+    padding: 2px 0;
+    z-index: 10;
+}
+
+.detail span {
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    z-index: 10;
+}
+
+.wrap {
+    padding: 20px 10px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 10;
+    background-color: #ddd8ff;
+}
+
+.innerdetail a:hover {
+    background-color: #d2c9ff;
+    color: #000;
+}
+
+.blob {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    background-color: #9294ff;
+    z-index: 1;
+    top: -60px;
+    right: -50px;
+    transition: 0.3s ease-in;
+}
+
+.wrap:hover .blob {
+    transform: scale(15);
+}
+
+.img {
+    z-index: 10;
+    position: relative;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover,
+.form-control-borderless:active,
+.form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
