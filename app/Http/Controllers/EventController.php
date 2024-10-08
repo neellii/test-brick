@@ -16,7 +16,7 @@ class EventController extends Controller
     {  
         $event->users()->toggle(Auth::id());
         $user = Auth::user();
-        return redirect()->route('dashboard', [$user])->with('success', 'успешно');
+        return redirect()->route('home')->with('success', 'записи обновлены');
     }
 
      /**

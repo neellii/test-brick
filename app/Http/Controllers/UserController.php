@@ -90,7 +90,7 @@ class UserController extends Controller
      */
     public function update(UpdateRequest $request, User $user)
     {
-        $user->update($request->validated());
+        $user->update(array_filter($request->validated()));
 
         return redirect()->route('user.profile', $user->id)->with('success', 'Данные успешно обновлены');
     }

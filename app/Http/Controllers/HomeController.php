@@ -31,7 +31,7 @@ class HomeController extends Controller
         )->orWhereHas('categories', function(Builder $builder) use($request) {
             $builder->where('category', 'ilike', "%{$request->search}%");
         })
-        ->paginate(9);
+        ->paginate(50);
 
         return view('welcome', compact('events'));
     }

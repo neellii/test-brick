@@ -36,23 +36,23 @@
               <tr>
                 <th scope="row">Создан</th>
                 <td>
-                    {{ $event->created_at }}
+                    {{ $category->created_at }}
                 </td>
               </tr>
 
               <tr>
                 <th scope="row">Обновлен</th>
                 <td>
-                    {{ $event->updated_at }}
+                    {{ $category->updated_at }}
                 </td>
               </tr>
           </tbody>
         </table>
 
         <div class="mt-5 d-flex">
-          <a class="btn btn-dark me-5" href="{{ route('admin.events.edit', $event->id) }}">Редактировать</a>
+          <a class="btn btn-dark me-5" href="{{ route('admin.categories.edit', $category->id) }}">Редактировать</a>
 
-          <form action="{{ route('admin.events.destroy', $event->id) }}" method="POST">
+          <form action="{{ route('admin.categories.destroy', $category->id) }}" method="POST">
             @csrf
             @method("DELETE")
             <input type="submit" class="btn btn-danger" value="Удалить"></input>
