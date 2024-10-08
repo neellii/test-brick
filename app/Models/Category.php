@@ -13,11 +13,18 @@ class Category extends Model
 
     protected $fillable = ['category', 'status'];
 
+    
+     /**
+     *  Many to many relation to Event model
+     */
     public function events(): BelongsToMany
     {
         return $this->belongsToMany(Event::class);
     }
 
+    /**
+     *  Attribute to correctly display status of the event record
+     */
     protected function status(): Attribute
     {
         return Attribute::make(

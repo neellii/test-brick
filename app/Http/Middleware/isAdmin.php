@@ -10,14 +10,14 @@ use Symfony\Component\HttpFoundation\Response;
 class isAdmin
 {
     /**
-     * Handle an incoming request.
+     * Check if user is Admin
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::user()->role !== 'admin') {
-            return response()->json('У вас нет прав доступа к странице');
+            abort(403, 'У вас нет прав доступа к странице');
         }
         return $next($request);
     }

@@ -50,11 +50,18 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
+    /**
+     *  Many to many relation wuth Event model
+     */
     public function events(): BelongsToMany
     {
         return $this->belongsToMany(Event::class);
     }
 
+    
+    /**
+     *  Attribute to correctly display status of the event record
+     */
     protected function status(): Attribute
     {
         return Attribute::make(

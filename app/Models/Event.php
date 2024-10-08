@@ -13,16 +13,25 @@ class Event extends Model
 
     protected $fillable = ['name', 'description', 'dateTime'];
 
+    /**
+     *  Many to many relation with User model
+     */
     public function users(): BelongsToMany
     {
         return $this->belongsToMany(User::class);
     }
 
+    /**
+     *  Many to many relation wuth Category model
+     */
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class);
     }
 
+    /**
+     *  Attribute to correctly display status of the event record
+     */
     protected function status(): Attribute
     {
         return Attribute::make(
